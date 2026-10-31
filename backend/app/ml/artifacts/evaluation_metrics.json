@@ -1,0 +1,305 @@
+{
+  "timestamp": "2026-10-31T22:05:04.483073+00:00",
+  "dataset": {
+    "type": "reproducible_synthetic_simulation",
+    "train_samples": 3360,
+    "val_samples": 720,
+    "test_samples": 720,
+    "train_incidents": 280,
+    "val_incidents": 60,
+    "test_incidents": 60
+  },
+  "models": {
+    "isolation_forest": {
+      "model_name": "Isolation Forest Anomaly Detector",
+      "accuracy": 0.7389,
+      "precision": 1.0,
+      "recall": 0.4198,
+      "f1_score": 0.5913,
+      "confusion_matrix": [
+        [
+          396,
+          0
+        ],
+        [
+          188,
+          136
+        ]
+      ],
+      "artifact_path": "C:\\Users\\Diksha\\OneDrive\\Desktop\\Algothon\\New\\backend\\app\\ml\\artifacts\\isolation_forest.joblib",
+      "features": [
+        "latency_ms",
+        "packet_loss_pct",
+        "jitter_ms",
+        "cpu_usage_pct",
+        "memory_usage_pct",
+        "link_utilization_pct",
+        "queue_drops",
+        "interface_errors"
+      ]
+    },
+    "xgboost_fault_classifier": {
+      "model_name": "XGBoost Fault Classifier",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "confusion_matrix": [
+        [
+          36,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          132,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          60,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          36,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          396,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          48
+        ]
+      ],
+      "classification_report": {
+        "congestion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 36.0
+        },
+        "dns_dhcp_failure": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "hardware_failure": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 132.0
+        },
+        "interface_fault": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 60.0
+        },
+        "latency_spike": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 36.0
+        },
+        "normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 396.0
+        },
+        "weak_wifi": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 48.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 720.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 720.0
+        }
+      },
+      "feature_importance": {
+        "latency_ms": 0.055,
+        "packet_loss_pct": 0.0848,
+        "jitter_ms": 0.0328,
+        "cpu_usage_pct": 0.0433,
+        "memory_usage_pct": 0.002,
+        "link_utilization_pct": 0.094,
+        "queue_drops": 0.0493,
+        "interface_errors": 0.0584,
+        "dns_resolution_time_ms": 0.1551,
+        "dns_error_rate_pct": 0.1077,
+        "dhcp_ack_latency_ms": 0.0477,
+        "wifi_rssi_dbm": 0.0157,
+        "wifi_snr_db": 0.0931,
+        "wifi_retrans_pct": 0.1611
+      },
+      "artifact_path": "C:\\Users\\Diksha\\OneDrive\\Desktop\\Algothon\\New\\backend\\app\\ml\\artifacts\\xgboost_fault_classifier.joblib",
+      "features": [
+        "latency_ms",
+        "packet_loss_pct",
+        "jitter_ms",
+        "cpu_usage_pct",
+        "memory_usage_pct",
+        "link_utilization_pct",
+        "queue_drops",
+        "interface_errors",
+        "dns_resolution_time_ms",
+        "dns_error_rate_pct",
+        "dhcp_ack_latency_ms",
+        "wifi_rssi_dbm",
+        "wifi_snr_db",
+        "wifi_retrans_pct"
+      ]
+    },
+    "random_forest_infra": {
+      "model_name": "Random Forest Infrastructure Classifier",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "confusion_matrix": [
+        [
+          132,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          60,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          492,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          36
+        ]
+      ],
+      "feature_importance": {
+        "cpu_usage_pct": 0.1945,
+        "memory_usage_pct": 0.0461,
+        "link_utilization_pct": 0.1778,
+        "queue_drops": 0.2415,
+        "interface_errors": 0.19,
+        "latency_ms": 0.0571,
+        "packet_loss_pct": 0.093
+      },
+      "artifact_path": "C:\\Users\\Diksha\\OneDrive\\Desktop\\Algothon\\New\\backend\\app\\ml\\artifacts\\random_forest_infra.joblib",
+      "features": [
+        "cpu_usage_pct",
+        "memory_usage_pct",
+        "link_utilization_pct",
+        "queue_drops",
+        "interface_errors",
+        "latency_ms",
+        "packet_loss_pct"
+      ]
+    },
+    "gradient_boosting_health": {
+      "model_name": "Gradient Boosting Health Classifier",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "confusion_matrix": [
+        [
+          192,
+          0,
+          0
+        ],
+        [
+          0,
+          396,
+          0
+        ],
+        [
+          0,
+          0,
+          132
+        ]
+      ],
+      "feature_importance": {
+        "latency_ms": 0.0001,
+        "packet_loss_pct": 0.3858,
+        "jitter_ms": 0.2161,
+        "cpu_usage_pct": 0.0,
+        "memory_usage_pct": 0.0,
+        "link_utilization_pct": 0.0,
+        "queue_drops": 0.0001,
+        "interface_errors": 0.2419,
+        "dns_resolution_time_ms": 0.061,
+        "dns_error_rate_pct": 0.095
+      },
+      "artifact_path": "C:\\Users\\Diksha\\OneDrive\\Desktop\\Algothon\\New\\backend\\app\\ml\\artifacts\\gradient_boosting_health.joblib",
+      "features": [
+        "latency_ms",
+        "packet_loss_pct",
+        "jitter_ms",
+        "cpu_usage_pct",
+        "memory_usage_pct",
+        "link_utilization_pct",
+        "queue_drops",
+        "interface_errors",
+        "dns_resolution_time_ms",
+        "dns_error_rate_pct"
+      ]
+    }
+  }
+}
